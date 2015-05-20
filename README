@@ -1,0 +1,39 @@
+Installation
+============
+
+* Install dependencies for npm
+
+```
+npm install
+```
+
+* Install python dependencies for jinja2
+
+```
+pip install -r requirements.txt
+```
+
+
+* And run it!
+
+```
+grunt
+```
+
+
+
+Development
+==========
+
+* Install the liveReload plugin for your browser
+* Type `grunt` to start watching
+* Add any html templates into `app/src/templates/` and they will be automatically compiled into public
+* Add any css changes into `app/src/stylesheets/main.scss` and it will be automatically compiled into public
+  * You may want to place your variables in app/src/stylesheets/_variables.scss
+
+
+
+Production
+==========
+
+* Use the contents of `app/public/`
