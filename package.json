@@ -1,12 +1,13 @@
 {
   "name": "package",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {},
-  "author": "Alexey 'ok2ju' Vakulich",
+  "author": "Techiela",
   "devDependencies": {
     "grunt": "latest",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-compass": "latest",
-    "grunt-contrib-connect": "latest"
+    "grunt-contrib-connect": "latest",
+    "grunt-jinja2": "latest"
   }
 }

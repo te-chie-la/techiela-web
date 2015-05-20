@@ -43,6 +43,10 @@ module.exports = function(grunt) {
                 files: ['**/*.{scss,sass}'],
                 tasks: ['compass:dev']
             },
+            jinja2: {
+                files: ['app/src/templates/*'],
+                tasks: ['jinja2:dev']
+            }
         },
         compass: {
             dev: {
@@ -59,6 +63,21 @@ module.exports = function(grunt) {
                     environment: 'production'
                 }
             },
+        },
+        jinja2: {
+            dev: {
+                options:{
+                    template_path: 'app/src/templates',
+                    context_path: 'app/src/templates/context'
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'app/src/templates',
+                    src: ['index.html'],
+                    dest: 'app/public',
+                    ext: '.html'
+                }]
+            }
         }
     });
 
@@ -66,9 +85,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-jinja2');
 
     // Default task(s).
-    grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'watch']);
+    grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'watch']);
     // prod build
     grunt.registerTask('prod', ['compass:prod']);
 
