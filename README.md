@@ -7,6 +7,9 @@ Installation
 npm install
 ```
 
+* Install grunt dependencies
+npm install grunt grunt-cli grunt-jinja2 compass
+
 * Install python dependencies for jinja2
 
 ```
