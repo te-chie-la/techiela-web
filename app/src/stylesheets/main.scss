@@ -6,15 +6,14 @@
     background: rgba(66,28,66,1);
 }
 
-.bg_1 {
-    background: rgba(66,28,66,1);
-    position: absolute;
+#services {
+  background: rgb(23, 0, 48);
+  padding: 0px 75px 75px;
 }
 
 .bg_after {
     background: transparent;
     content: '';
-    position: absolute;
     z-index: 0;
     top: 0px;
     right: 0;
@@ -70,4 +69,11 @@
 
 .menu-span {
     display: block;
+}
+
+.home-text {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
 }

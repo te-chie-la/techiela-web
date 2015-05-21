@@ -8030,16 +8030,15 @@ button.close {
 }
 
 /* line 9, ../../src/stylesheets/main.scss */
-.bg_1 {
-  background: #421c42;
-  position: absolute;
+#services {
+  background: #170030;
+  padding: 0px 75px 75px;
 }
 
 /* line 14, ../../src/stylesheets/main.scss */
 .bg_after {
   background: transparent;
   content: '';
-  position: absolute;
   z-index: 0;
   top: 0px;
   right: 0;
@@ -8048,28 +8047,28 @@ button.close {
   font-family: "Montserrat", sans-serif;
 }
 
-/* line 26, ../../src/stylesheets/main.scss */
+/* line 25, ../../src/stylesheets/main.scss */
 .container {
   padding: 75px 0 75px;
 }
 
-/* line 30, ../../src/stylesheets/main.scss */
+/* line 29, ../../src/stylesheets/main.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 34, ../../src/stylesheets/main.scss */
+/* line 33, ../../src/stylesheets/main.scss */
 .main-logo {
   padding: 75px 75px 75px;
 }
 
-/* line 38, ../../src/stylesheets/main.scss */
+/* line 37, ../../src/stylesheets/main.scss */
 .section-table {
   font-size: 2em;
   color: white;
 }
 
-/* line 43, ../../src/stylesheets/main.scss */
+/* line 42, ../../src/stylesheets/main.scss */
 .fa {
   padding: 25px;
   line-height: 62px;
@@ -8078,31 +8077,39 @@ button.close {
   border: rgba(255, 255, 255, 0.5) solid 1px;
 }
 
-/* line 51, ../../src/stylesheets/main.scss */
+/* line 50, ../../src/stylesheets/main.scss */
 .fa:hover {
   box-shadow: rgba(255, 255, 255, 0.8) 0 0 20px;
 }
 
-/* line 55, ../../src/stylesheets/main.scss */
+/* line 54, ../../src/stylesheets/main.scss */
 .section-table a {
   color: white;
   background: rgba(255, 255, 255, 0);
   text-align: center;
 }
 
-/* line 61, ../../src/stylesheets/main.scss */
+/* line 60, ../../src/stylesheets/main.scss */
 .section-table a:hover {
   color: #999999;
   text-decoration: none;
 }
 
-/* line 66, ../../src/stylesheets/main.scss */
+/* line 65, ../../src/stylesheets/main.scss */
 .menu {
   display: inline-block;
   margin: 25px;
 }
 
-/* line 71, ../../src/stylesheets/main.scss */
+/* line 70, ../../src/stylesheets/main.scss */
 .menu-span {
   display: block;
+}
+
+/* line 74, ../../src/stylesheets/main.scss */
+.home-text {
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  font-family: "Montserrat", sans-serif;
 }
