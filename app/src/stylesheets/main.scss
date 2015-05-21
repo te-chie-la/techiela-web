@@ -1,3 +1,73 @@
 @import "variables";
 @import "bootstrap";
 @import "compass/css3";
+
+#home {
+    background: rgba(66,28,66,1);
+}
+
+.bg_1 {
+    background: rgba(66,28,66,1);
+    position: absolute;
+}
+
+.bg_after {
+    background: transparent;
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    font-family: $font-family;
+}
+
+.container {
+  padding: 75px 0 75px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.main-logo {
+    padding: 75px 75px 75px;
+}
+
+.section-table {
+    font-size: 3em;
+    color: white;
+}
+
+.fa {
+    padding: 25px;
+    line-height: 62px;
+    transition: all 0.5s;
+    -webkit-border-radius: 120%;
+    border: rgba(255,255,255,0.5) solid 1px;
+}
+
+.fa:hover {
+    box-shadow: rgba(255,255,255,0.8) 0 0 20px;
+}
+
+.section-table a {
+    color: rgba(255,255,255,1);
+    background: rgba(255,255,255,0);
+    text-align: center;
+}
+
+.section-table a:hover {
+    color: #999999 ;
+    text-decoration: none;
+}
+
+.menu {
+    display: inline-block;
+    margin: 25px;
+}
+
+.menu-span {
+    display: block;
+}
