@@ -67,6 +67,10 @@
     margin: 25px;
 }
 
+.row {
+  display: block;
+ }
+
 .menu-span {
     display: block;
 }
@@ -76,4 +80,26 @@
   color: white;
   font-size: 1.5em;
   font-family: "Montserrat", sans-serif;
+}
+
+figure
+{
+    width:25%;
+    float:left;
+    margin:0px;
+    text-align:center;
+    padding:25px;
+}
+
+.white-circle {
+    border-radius: 100%;
+
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
 }

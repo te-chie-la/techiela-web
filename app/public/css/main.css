@@ -8102,14 +8102,40 @@ button.close {
 }
 
 /* line 70, ../../src/stylesheets/main.scss */
-.menu-span {
+.row {
   display: block;
 }
 
 /* line 74, ../../src/stylesheets/main.scss */
+.menu-span {
+  display: block;
+}
+
+/* line 78, ../../src/stylesheets/main.scss */
 .home-text {
   text-align: center;
   color: white;
   font-size: 1.5em;
   font-family: "Montserrat", sans-serif;
+}
+
+/* line 85, ../../src/stylesheets/main.scss */
+figure {
+  width: 25%;
+  float: left;
+  margin: 0px;
+  text-align: center;
+  padding: 25px;
+}
+
+/* line 94, ../../src/stylesheets/main.scss */
+.white-circle {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  background: #fff;
+  border: 2px solid #666;
+  color: #666;
+  text-align: center;
 }
