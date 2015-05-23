@@ -44,4 +44,10 @@ Development
 Production
 ==========
 
-* Use the contents of `app/public/`
+Run:
+
+```
+grunt prod
+```
+
+Collect your site code in `app/public/`

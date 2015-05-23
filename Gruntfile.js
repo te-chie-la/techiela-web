@@ -36,7 +36,8 @@ module.exports = function(grunt) {
                 files: [
                     '<%= config.app %>/public/{,*/}*.html',
                     '<%= config.app %>/public/css/{,*/}*.css',
-                    '<%= config.app %>/public/images/{,*/}*'
+                    '<%= config.app %>/public/images/{,*/}*',
+                    '<%= config.app %>/public/fonts/{,*/}*'
                 ]
             },
             compass: {
@@ -64,12 +65,13 @@ module.exports = function(grunt) {
                 options: {
                     sassDir: ['app/src/stylesheets'],
                     cssDir: ['app/public/css'],
-                    environment: 'production'
+                    environment: 'production',
+                    outputStyle: 'compressed'
                 }
             },
         },
         jinja2: {
-            dev: {
+            main: {
                 options:{
                     template_path: 'app/src/templates',
                     context_path: 'app/src/templates/context'
@@ -121,6 +123,6 @@ module.exports = function(grunt) {
     // Default task(s).
     grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'copy', 'watch']);
     // prod build
-    grunt.registerTask('prod', ['compass:prod']);
+    grunt.registerTask('prod', ['compass:prod', 'jinja2', 'copy']);
 
 };
