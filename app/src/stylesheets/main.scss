@@ -1,6 +1,6 @@
 @import "variables";
-@import "bootstrap";
-@import "compass/css3";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap-compass.scss";
+@import "../../../bower_components/fontawesome/scss/font-awesome.scss";
 
 #home {
     background: rgba(66,28,66,1);

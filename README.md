@@ -1,14 +1,11 @@
 Installation
 ============
 
-* Install dependencies for npm
+* Install dependencies for grunt
 
 ```
 npm install
 ```
-
-* Install grunt dependencies
-npm install grunt grunt-cli grunt-jinja2 compass
 
 * Install python dependencies for jinja2
 
@@ -16,6 +13,11 @@ npm install grunt grunt-cli grunt-jinja2 compass
 pip install -r requirements.txt
 ```
 
+* Install bower dependencies
+
+```
+bower install
+```
 
 * And run it!
 

@@ -1,0 +1,21 @@
+{
+  "name": "techiela-web",
+  "version": "0.0.1",
+  "authors": [
+    "Techiela"
+  ],
+  "license": "MIT",
+  "private": true,
+  "homepage": "http://te.chie.la/",
+  "dependencies": {
+    "bootstrap-sass": "latest",
+    "fontawesome": "latest"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -44,8 +44,12 @@ module.exports = function(grunt) {
                 tasks: ['compass:dev']
             },
             jinja2: {
-                files: ['app/src/templates/*'],
+                files: ['app/src/templates/**'],
                 tasks: ['jinja2:dev']
+            },
+            copy: {
+                files: ['app/src/images/*', 'app/src/fonts/*'],
+                tasks: ['copy:main']
             }
         },
         compass: {
@@ -78,6 +82,31 @@ module.exports = function(grunt) {
                     ext: '.html'
                 }]
             }
+        },
+        copy: {
+            main: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'app/src/images',
+                        src: '**/*',
+                        dest: 'app/public/images/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'app/src/fonts',
+                        src: '**/*',
+                        dest: 'app/public/fonts/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'bower_components/fontawesome/fonts/',
+                        src: '**/*',
+                        dest: 'app/public/fonts/'
+                    }
+                ]
+
+            }
         }
     });
 
@@ -85,10 +114,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-jinja2');
 
+
     // Default task(s).
-    grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'watch']);
+    grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'copy', 'watch']);
     // prod build
     grunt.registerTask('prod', ['compass:prod']);
 
