@@ -124,5 +124,6 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'copy', 'watch']);
     // prod build
     grunt.registerTask('prod', ['compass:prod', 'jinja2', 'copy']);
+    grunt.registerTask('prod', ['compass:dev', 'jinja2', 'copy']);
 
 };
