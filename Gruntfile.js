@@ -46,7 +46,7 @@ module.exports = function(grunt) {
             },
             jinja2: {
                 files: ['app/src/templates/**'],
-                tasks: ['jinja2:dev']
+                tasks: ['jinja2:main']
             },
             copy: {
                 files: ['app/src/images/*', 'app/src/fonts/*'],

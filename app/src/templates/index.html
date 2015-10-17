@@ -1,63 +1,24 @@
-{% extends 'common/base.html' %}
+{% extends 'modules/base.html' %}
 
 {% block content %}
-<header id="home" class="bg_after">
-    <div class="container">
-        <div class="main-logo text-center">
-            <a href="http://te.chie.la">
-                <img src="images/logo-main.png" alt="http://te.chie.la" >
-            </a>
-        </div>
-        <div class="section-table text-center bg_1 col-md-12">
-            <a class="menu" href="#services">
-                <div class="fa fa-star"></div>
-                <span class="menu-span">SERVICES</span>
-            </a>
-            <a class="menu" href="#about_us">
-                <div class="fa fa-users"></div>
-                <span class="menu-span">ABOUT</span>
-            </a>
-            <a class="menu" href="#contact_us">
-                <div class="fa fa-envelope-o"></div>
-                <span class="menu-span">CONTACT</span>
-            </a>
-            <a class="menu" href="http://te.chie.la/?cat=1">
-                <div class="fa fa-book"></div>
-                <span class="menu-span">BLOG</span>
 
-            </a>
-        </div>
-        <div class="home-text text-center">
-            <p>WE ARE A COMPANY OF TECHIE PEOPLE THAT AIMS TO HELP YOU ACHIEVE YOUR NEEDS</p>
-            <p>WE PROVIDE YOU TRAINING AND CONSULTANCY ON PYTHON AND AGILE METHODOLOGIES</p>
-            <p>WE HELP YOU ON YOUR DEVELOPMENT PROCESS TO ACHIEVE BETTER PRACTICES ON YOUR WORKING ENVIRONMENT</p>
-        </div>
-    </div>
-</header>
-<section id="services" class="text-center">
-    <div class="container section-table">
+{% include 'modules/header.html' %}
+<div class="services">
+    <div class="services-title">
         <div class="fa fa-star"></div>
-        <span class="menu-span">SERVICES</span>
+        Services
     </div>
-    <div class="home-text text-center">
-        <p>PYTHON AND AGILE METHODOLOGIES ARE OUR SWISS ARMY KNIFE. WE SPECIALIZE IN PYTHON AND THE PYTHON ECOSYSTEM AS WELL AS IN AGILE METHODOLOGIES</p>
+    <div class="services-text">
+        <p>Python and agile methodologies are our swiss army knife. We specialize in python and the python ecosystem as well as in agile methodologies</p>
     </div>
-    <div class="section-table text-center">
-        <div class="row">
-            <figure>
-              <img class="white-circle" src="http://www.unixstickers.com/image/cache/data/stickers/python/python.sh-600x600.png" alt="Python" width="80" height="80">
-            </figure>
-            <figure>
-              <img class="white-circle" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/145px-Postgresql_elephant.svg.png" alt="PostgreSQL" width="80" height="80">
-            </figure>
-            <figure>
-              <img class="white-circle" src="http://www.hartleybrody.com/skills/django.png" alt="Django" width="100" height="100">
-            </figure>
-            <figure>
-              <img class="white-circle" src="http://www.hartleybrody.com/skills/flask.png" alt="Flask" width="100" height="100">
-            </figure>
-        </div>
+    <div class="services-table">
+        <ul>
+            <li>Python</li>
+            <li>Django</li>
+            <li>Flask</li>
+            <li>PostgreSQL</li>
+        </ul>
     </div>
 
-</section>
+</div>
 {% endblock %}

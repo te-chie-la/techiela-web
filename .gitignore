@@ -1,3 +1,12 @@
 app/public/
 bower_components/
 node_modules/
+.sass-cache/
+
+
+# OSX specific
+**/.DS_Store
+
+
+# PyCharm specific
+.idea/
