@@ -1,3 +1,22 @@
-.services {
+#services {
     background-color: #170030;
+    color: white;
+
+    .circle {
+        border-radius: 50%;
+        position: relative;
+        border: white solid 3px;
+        padding: 25px;
+    }
+
+    p {
+        font-size: 22px;
+        margin: 30px 0;
+        font-weight: 300;
+    }
+
+    .technology {
+        font-weight: 900;
+        font-size: 18px;
+    }
 }
