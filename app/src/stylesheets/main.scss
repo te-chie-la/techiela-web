@@ -3,6 +3,7 @@
 @import "../../../bower_components/fontawesome/scss/font-awesome.scss";
 @import "header";
 @import "services";
+@import "feedback";
 
 body {
     position: relative;
@@ -11,5 +12,16 @@ body {
 
 .container {
     padding: 150px 0 75px;
+}
+
+#hidden-navbar {
+
+    a {
+        color: white;
+
+        i {
+            display: block;
+        }
+    }
 }
 

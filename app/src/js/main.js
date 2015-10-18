@@ -1,7 +1,11 @@
 $(document).ready(function(){
 
     // Top navbar
-    //$('body').scrollspy({ target: '#hidden-navbar' });
+    $('body').scrollspy({ target: '#hidden-navbar' });
+
+    $('#hidden-navbar').on('activate.bs.scrollspy', function () {
+        $('#hidden-navbar').show();
+    });
 
 
     // Scrolling header

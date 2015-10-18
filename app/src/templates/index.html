@@ -1,17 +1,38 @@
 {% extends 'modules/base.html' %}
 
 {% block content %}
-<body data-spy="scroll" data-target="hidden-navbar">
-    <!-- <div class="hidden-navbar">
-        <ul class="nav nav-tabs" role="tablist">
-            <li>This link</li>
-            <li>This link</li>
-            <li>This link</li>
-        </ul>
-    </div>-->
+<body data-spy="scroll" data-target="#hidden-navbar">
+    <nav id="hidden-navbar" class="navbar navbar-inverse navbar-fixed-top" style="display: none;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <img alt="Brand" src="images/logo-brand.png">
+                </a>
+            </div>
+
+            <ul class="nav nav-tabs pull-right" role="tablist">
+                <li><a href="#services"><i class="fa fa-star fa-2x"></i>Services</a></li>
+                <li><a href="#about"><i class="fa fa-users fa-2x"></i>About</a></li>
+                <li><a href="#contact"><i class="fa fa-envelope-o fa-2x"></i>Contact</a></li>
+                <li><a href="?cat=1"><i class="fa fa-book fa-2x"></i>Blog</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
     {% include 'modules/header.html' %}
-    {% include 'modules/services.html' %}
+
+    <section id="services">
+        {% include 'modules/services.html' %}
+    </section>
+
+    <section id="feedback">
+        {% include 'modules/feedback.html' %}
+    </section>
+
+    <section id="contact">
+        ...
+    </section>
+
 </body>
 {% endblock %}
