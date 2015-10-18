@@ -123,7 +123,6 @@ module.exports = function(grunt) {
                 },
                 src: [
                     //TODO Minify?
-                    //'bower_components/animate.css/animate.css',
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                     'app/src/js/**/*'
