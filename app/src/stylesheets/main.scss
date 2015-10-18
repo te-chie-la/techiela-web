@@ -1,52 +1,14 @@
 @import "variables";
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "../../../bower_components/fontawesome/scss/font-awesome.scss";
+@import "header";
+@import "services";
 
-.header {
-    background-color: #421C42;
-
-    .header-logo {
-        padding: 8% 0 8%;
-    }
-
-    .header-table {
-        a {
-            text-transform: uppercase;
-            font-weight: bold;
-            color: white;
-            text-decoration: none;
-
-            transition: all 0.5s;
-            display: inline-block;
-
-
-            &:hover {
-                color: grey;
-                text-decoration: none;
-            }
-
-            .circle {
-                display: inline-block;
-                border-radius: 50%;
-                position: relative;
-                border: white solid 1px;
-                padding: 25px;
-            }
-
-            .circle-title {
-                display: block;
-            }
-        }
-        
-
-    }
-
-    .header-text {
-
-    }
+body {
+    position: relative;
 }
 
-
-.services {
-    background-color: #170030;
+.container {
+    padding: 150px 0 75px;
 }
+

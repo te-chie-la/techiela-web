@@ -1,24 +1,17 @@
 {% extends 'modules/base.html' %}
 
 {% block content %}
-
-{% include 'modules/header.html' %}
-<div class="services">
-    <div class="services-title">
-        <div class="fa fa-star"></div>
-        Services
-    </div>
-    <div class="services-text">
-        <p>Python and agile methodologies are our swiss army knife. We specialize in python and the python ecosystem as well as in agile methodologies</p>
-    </div>
-    <div class="services-table">
-        <ul>
-            <li>Python</li>
-            <li>Django</li>
-            <li>Flask</li>
-            <li>PostgreSQL</li>
+<body data-spy="scroll" data-target="hidden-navbar">
+    <!-- <div class="hidden-navbar">
+        <ul class="nav nav-tabs" role="tablist">
+            <li>This link</li>
+            <li>This link</li>
+            <li>This link</li>
         </ul>
-    </div>
+    </div>-->
 
-</div>
+
+    {% include 'modules/header.html' %}
+    {% include 'modules/services.html' %}
+</body>
 {% endblock %}

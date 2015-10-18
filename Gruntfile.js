@@ -37,7 +37,8 @@ module.exports = function(grunt) {
                     '<%= config.app %>/public/{,*/}*.html',
                     '<%= config.app %>/public/css/{,*/}*.css',
                     '<%= config.app %>/public/images/{,*/}*',
-                    '<%= config.app %>/public/fonts/{,*/}*'
+                    '<%= config.app %>/public/fonts/{,*/}*',
+                    '<%= config.app %>/public/js/{,*/}*'
                 ]
             },
             compass: {
@@ -51,7 +52,12 @@ module.exports = function(grunt) {
             copy: {
                 files: ['app/src/images/*', 'app/src/fonts/*'],
                 tasks: ['copy:main']
+            },
+            concat: {
+                files: ['app/src/js/*'],
+                tasks: ['concat:dist']
             }
+
         },
         compass: {
             dev: {
@@ -109,6 +115,21 @@ module.exports = function(grunt) {
                 ]
 
             }
+        },
+        concat: {
+            dist: {
+                options: {
+                  separator: ';\n',
+                },
+                src: [
+                    //TODO Minify?
+                    //'bower_components/animate.css/animate.css',
+                    'bower_components/jquery/dist/jquery.js',
+                    'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+                    'app/src/js/**/*'
+                ],
+                dest: 'app/public/js/scripts.js',
+            }
         }
     });
 
@@ -117,14 +138,16 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-jinja2');
 
 
+
     // Default task(s).
-    grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'copy', 'watch']);
+    grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'copy', 'concat', 'watch']);
     // prod build
-    grunt.registerTask('prod', ['compass:prod', 'jinja2', 'copy']);
+    grunt.registerTask('prod', ['compass:prod', 'jinja2', 'copy', 'concat']);
     // dev build
-    grunt.registerTask('dev', ['compass:dev', 'jinja2', 'copy']);
+    grunt.registerTask('dev', ['compass:dev', 'jinja2', 'copy', 'concat']);
 
 };
