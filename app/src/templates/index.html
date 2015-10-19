@@ -1,9 +1,9 @@
 {% extends 'modules/base.html' %}
 
 {% block content %}
-<body data-spy="scroll" data-target="#hidden-navbar">
+<body data-spy="scroll" data-target="#hidden-navbar" data-offset="100">
     <nav id="hidden-navbar" class="navbar navbar-inverse navbar-fixed-top" style="display: none;">
-        <div class="container-fluid">
+        <div class="container text-center">
             <div class="navbar-header">
                 <a href="#" class="navbar-brand">
                     <img alt="Brand" src="images/logo-brand.png">
@@ -11,10 +11,22 @@
             </div>
 
             <ul class="nav nav-tabs pull-right" role="tablist">
-                <li><a href="#services"><i class="fa fa-star fa-2x"></i>Services</a></li>
-                <li><a href="#about"><i class="fa fa-users fa-2x"></i>About</a></li>
-                <li><a href="#contact"><i class="fa fa-envelope-o fa-2x"></i>Contact</a></li>
-                <li><a href="?cat=1"><i class="fa fa-book fa-2x"></i>Blog</a></li>
+                <li><a href="#services">
+                    <i class="fa fa-star fa-2x"></i>
+                    Services</a>
+                </li>
+                <li><a href="#about">
+                    <i class="fa fa-lightbulb-o fa-2x"></i>
+                    About</a>
+                </li>
+                <li><a href="#contact">
+                    <i class="fa fa-envelope-o fa-2x"></i>
+                    Contact</a>
+                </li>
+                <li><a href="?cat=1">
+                    <i class="fa fa-book fa-2x"></i>
+                    Blog</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -30,9 +42,15 @@
         {% include 'modules/feedback.html' %}
     </section>
 
+    {% include 'modules/team.html' %}
+
+    {% include 'modules/blog.html' %}
+
     <section id="contact">
-        ...
+        {% include 'modules/contact.html' %}
     </section>
+
+    {% include 'modules/footer.html' %}
 
 </body>
 {% endblock %}

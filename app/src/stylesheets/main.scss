@@ -4,6 +4,10 @@
 @import "header";
 @import "services";
 @import "feedback";
+@import "blog";
+@import "contact";
+@import "team";
+@import "footer";
 
 body {
     position: relative;
@@ -16,12 +20,43 @@ body {
 
 #hidden-navbar {
 
-    a {
-        color: white;
+    background-color: black;
+    padding-bottom: 1%;
 
-        i {
-            display: block;
+    .container {
+        padding: 0;
+    }
+
+    .nav-tabs {
+        border-bottom: none;
+        font-weight: 900;
+
+        a {
+            color: white;
+            transition: all 0.5s;
+
+            &:hover {
+                color: #421C42;
+                background-color: black;
+                border: none;
+            }
+
+            i {
+                display: block;
+                line-height: 2em;
+            }
         }
+
+        .active a{
+            background-color: black;
+            color: #421C42;
+            border: none;
+        }
+
+    }
+
+    img {
+        height: 300%;
     }
 }
 

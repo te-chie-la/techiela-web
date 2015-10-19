@@ -1,12 +1,10 @@
 $(document).ready(function(){
 
-    // Top navbar
-    $('body').scrollspy({ target: '#hidden-navbar' });
-
     $(function () {
         $(window).scroll(function () {
             // set distance user needs to scroll before we start fadeIn
             if ($(this).scrollTop() > 100) {
+                // TODO check why slideDown/slideUp fails
                 $('#hidden-navbar').fadeIn('slow');
             } else {
                 $('#hidden-navbar').fadeOut('slow');
