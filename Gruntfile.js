@@ -117,17 +117,27 @@ module.exports = function(grunt) {
             }
         },
         concat: {
-            dist: {
+            dev: {
                 options: {
                   separator: ';\n',
                 },
                 src: [
-                    //TODO Minify?
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                     'app/src/js/**/*'
                 ],
                 dest: 'app/public/js/scripts.js',
+            }
+        },
+        uglify: {
+            dist: {
+                files: {
+                    'app/public/js/scripts.js': [
+                        'bower_components/jquery/dist/jquery.js',
+                        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+                        'app/src/js/**/*'
+                    ]
+                }
             }
         }
     });
@@ -138,6 +148,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jinja2');
 
 
@@ -145,8 +156,8 @@ module.exports = function(grunt) {
     // Default task(s).
     grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'copy', 'concat', 'watch']);
     // prod build
-    grunt.registerTask('prod', ['compass:prod', 'jinja2', 'copy', 'concat']);
+    grunt.registerTask('prod', ['compass:prod', 'jinja2', 'copy', 'uglify:dist']);
     // dev build
-    grunt.registerTask('dev', ['compass:dev', 'jinja2', 'copy', 'concat']);
+    grunt.registerTask('dev', ['compass:dev', 'jinja2', 'copy', 'uglify:dist']);
 
 };
