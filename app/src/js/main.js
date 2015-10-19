@@ -28,4 +28,8 @@ $(document).ready(function(){
         3000
     );
 
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
 });
