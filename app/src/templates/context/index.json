@@ -20,5 +20,13 @@
         "image": "rocio.jpg",
         "title": "UX Advisor"
       }
+  ],
+  "technologies": [
+    "Python",
+    "Django",
+    "Flask",
+    "PostgreSQL",
+    "AsyncIO",
+    "AngularJS"
   ]
 }
