@@ -19,6 +19,7 @@ header {
 
             .circle {
                 border-radius: 50%;
+                min-width: 100px;
                 position: relative;
                 border: white solid 1px;
                 transition: all 0.5s;

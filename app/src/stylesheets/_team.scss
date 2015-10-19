@@ -1,0 +1,31 @@
+#about {
+    color: white;
+    background-color: #1B1B1B;
+
+    p {
+        font-size: 22px;
+        font-weight: 300;
+        margin: 2% 0 2%;
+    }
+
+    .hackergotchi {
+        img {
+            border-radius: 50%;
+            width: 90%;
+
+            &:hover {
+                border: 10px solid white;
+                transition: all 0.5s;
+            }
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .hackergotchi-title {
+            font-weight: 300;
+        }
+    }
+}
