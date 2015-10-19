@@ -1,0 +1,14 @@
+<div class="container text-center">
+    <h1>Services</h1>
+
+    <i class="title-circle fa fa-star fa-3x"></i>
+
+    <p>Python and Agile Methodologies are our swiss army knife. We specialize in Python and the Python ecosystem as well as in Agile Methodologies</p>
+
+    {% for technology in technologies %}
+    <div class="col-xs-12 col-sm-6 col-md-3 technology">
+        <i class="fa fa-check-square-o"></i>
+        {{ technology }}
+    </div>
+    {% endfor %}
+</div>

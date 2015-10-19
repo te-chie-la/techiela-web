@@ -1,0 +1,64 @@
+header {
+    background-color: #421C42;
+
+    .header-logo {
+        padding: 8% 0 8%;
+    }
+
+    .header-table {
+        a {
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+
+            &:hover {
+                color: grey;
+                text-decoration: none;
+            }
+
+            .circle {
+                border-radius: 50%;
+                min-width: 100px;
+                position: relative;
+                border: white solid 1px;
+                transition: all 0.5s;
+                padding: 25px;
+
+                &:hover {
+                    border: grey solid 1px;
+                    box-shadow: white 0 0 20px;
+                    transition: all 0.5s;
+                }
+            }
+
+            .circle-title {
+                display: block;
+            }
+        }
+
+
+    }
+
+    .header-scroll {
+        width: 59%;
+        color: white;
+        font-size: 22px;
+
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        margin-top: 100px;
+        padding-top: 40px;
+
+        border-top: white 1px solid;
+
+        p {
+            transition: margin-top 0.5s ease-in-out 0s;
+            height: 112px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+    }
+}

@@ -1,0 +1,20 @@
+.blog {
+    background-color: #9AACBF;
+    color: white;
+
+    font-size: 27px;
+    line-height: 27px;
+    font-weight: bold;
+
+    a {
+        border: 2px solid green;
+        background-color: black;
+        color: white;
+        font-size: 22px;
+
+        &:hover {
+            border: 2px solid white;
+            color: white;
+        }
+    }
+}
