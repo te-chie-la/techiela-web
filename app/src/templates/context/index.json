@@ -6,19 +6,9 @@
         "title": "CEO"
       },
       {
-        "name": "Myriam Gonzalez",
-        "image": "myriam.jpg",
-        "title": "QA Advisor"
-      },
-      {
-        "name": "Jose A. Jimenez",
-        "image": "jose.jpg",
-        "title": "Marketing Advisor"
-      },
-      {
-        "name": "Rocio Del Arbol",
-        "image": "rocio.jpg",
-        "title": "UX Advisor"
+        "name": "Fran Hermoso",
+        "image": "fran.jpg",
+        "title": "Developer"
       }
   ],
   "technologies": [
