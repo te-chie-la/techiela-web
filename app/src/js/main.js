@@ -14,16 +14,12 @@ $(document).ready(function(){
 
 
     // Scrolling header
-    // TODO make this more generic
     window.setInterval(function(){
         $('.header-scroll p').first().css('margin-top', function(){
-            if ($(this).css('margin-top') == '-224px') {
-                return '0px';
-            } else if ($(this).css('margin-top') == '-112px') {
-                return '-224px';
-            } else {
-                return '-112px';
-            }
+            currentMargin = parseInt($('.header-scroll p').css('margin-top').replace('px', '').replace('-', ''));
+            maxMargin = ($('.header-scroll p').length - 1) * 112;
+            newMargin  = currentMargin < maxMargin ? currentMargin + 112 : 0;
+            return '-' + newMargin.toString() + 'px';
         })},
         3000
     );
