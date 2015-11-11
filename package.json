@@ -13,6 +13,7 @@
     "grunt-contrib-uglify": "latest",
     "grunt-jinja2": "latest",
     "grunt-cli": "latest",
+    "grunt-gh-pages": "latest",
     "bower": "latest",
     "compass": "latest"
   }
