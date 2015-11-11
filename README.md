@@ -52,9 +52,3 @@ grunt prod
 ```
 
 Collect your site code in `app/public/`
-
-and/or deploy it automatically to github using:
-
-```
-grunt deploy
-```

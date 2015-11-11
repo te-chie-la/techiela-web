@@ -139,12 +139,6 @@ module.exports = function(grunt) {
                     ]
                 }
             }
-        },
-        'gh-pages': {
-            options: {
-                base: 'app/public'
-            },
-            src: ['**']
         }
     });
 
@@ -156,7 +150,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jinja2');
-    grunt.loadNpmTasks('grunt-gh-pages');
 
 
 
@@ -166,7 +159,5 @@ module.exports = function(grunt) {
     grunt.registerTask('prod', ['compass:prod', 'jinja2', 'copy', 'uglify:dist']);
     // dev build
     grunt.registerTask('dev', ['compass:dev', 'jinja2', 'copy', 'uglify:dist']);
-    // deploy
-    grunt.registerTask('deploy', ['gh-pages'])
 
 };

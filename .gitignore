@@ -10,7 +10,3 @@ node_modules/
 
 # PyCharm specific
 .idea/
-
-
-# Github pages specific
-.grunt/
