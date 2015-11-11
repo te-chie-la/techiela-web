@@ -2,7 +2,7 @@ header {
     background-color: #421C42;
 
     .header-logo {
-        padding: 8% 0 8%;
+        padding: 8% 0 12%;
     }
 
     .header-table {
@@ -11,6 +11,7 @@ header {
             color: white;
             text-decoration: none;
             display: inline-block;
+            margin-right: 5%;
 
             &:hover {
                 color: grey;
@@ -24,6 +25,8 @@ header {
                 border: white solid 1px;
                 transition: all 0.5s;
                 padding: 25px;
+                width: 0;
+                margin: auto;
 
                 &:hover {
                     border: grey solid 1px;
@@ -34,6 +37,8 @@ header {
 
             .circle-title {
                 display: block;
+                font-size: 30px;
+                padding-top: 20px;
             }
         }
 
