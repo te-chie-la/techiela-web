@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <h1>Meet the team</h1>
+
+    <i class="title-circle fa fa-lightbulb-o fa-3x"></i>
+
+    <p>
+        We are a team of python experts with a wealth of experience on scrum,
+        kanban and extreme programming methodologies
+    </p>
+
+    {% for person in team %}
+        <div class="col-sm-3 col-sm-offset-2 hackergotchi">
+            <img src="images/hackergotchis/{{ person.image }}">
+
+            <h2>{{ person.name}}</h2>
+
+            <div class="hackergotchi-title">
+                {{ person.title }} & Techie
+            </div>
+        </div>
+    {% endfor %}
+</div>

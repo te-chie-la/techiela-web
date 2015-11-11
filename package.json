@@ -9,6 +9,8 @@
     "grunt-contrib-compass": "latest",
     "grunt-contrib-connect": "latest",
     "grunt-contrib-copy": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-uglify": "latest",
     "grunt-jinja2": "latest",
     "grunt-cli": "latest",
     "bower": "latest",

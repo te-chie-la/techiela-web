@@ -1,0 +1,22 @@
+{
+  "team": [
+      {
+        "name": "Raul Cumplido",
+        "image": "raul.jpg",
+        "title": "CEO"
+      },
+      {
+        "name": "Fran Hermoso",
+        "image": "fran.jpg",
+        "title": "Developer"
+      }
+  ],
+  "technologies": [
+    "Python",
+    "Django",
+    "Flask",
+    "PostgreSQL",
+    "AsyncIO",
+    "AngularJS"
+  ]
+}

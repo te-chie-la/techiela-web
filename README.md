@@ -36,6 +36,7 @@ Development
 * `app/src/templates/common/base.html` contains the general template for the whole site
 * Add any css changes into `app/src/stylesheets/main.scss`, see changes happen live
 * You may want to place your variables in `app/src/stylesheets/_variables.scss`
+* Generate the site using `grunt dev`
 * ...
 * Profit!
 
