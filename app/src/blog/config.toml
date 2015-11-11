@@ -1,0 +1,9 @@
+baseurl = "http://te.chie.la/blog/"
+languageCode = "en-en"
+title = "Techiela's blog"
+
+
+theme = "hyde"
+[params]
+    themeColor = "theme-base-0b"
+    description = "We are a company of techie people that aims to help you achieve your needs"

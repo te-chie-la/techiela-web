@@ -1,4 +1,5 @@
 app/public/
+app/src/blog/public/
 bower_components/
 node_modules/
 .sass-cache/
