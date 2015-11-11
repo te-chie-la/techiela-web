@@ -111,6 +111,12 @@ module.exports = function(grunt) {
                         cwd: 'bower_components/fontawesome/fonts/',
                         src: '**/*',
                         dest: 'app/public/fonts/'
+                    },
+                    {
+                        expand: true,
+                        cwd: 'app/src/blog/public/',
+                        src: '**/*',
+                        dest: 'app/public/blog/'
                     }
                 ]
 
