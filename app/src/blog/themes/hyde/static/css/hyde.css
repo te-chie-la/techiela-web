@@ -177,6 +177,17 @@ a.sidebar-nav-item:focus {
 
 /* Base16 (http://chriskempson.github.io/base16/#default) */
 
+
+/* Techiela */
+
+.theme-techiela .sidebar {
+  background-color: #421C42;
+}
+.theme-techiela .content a,
+.theme-techiela .related-posts li a:hover {
+  color: #421C42;
+}
+
 /* Red */
 .theme-base-08 .sidebar {
   background-color: #ac4142;
