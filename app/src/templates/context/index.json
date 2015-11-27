@@ -39,6 +39,10 @@
     {
       "url": "https://www.docker.com/",
       "image": "docker.png"
+    },
+    {
+      "url": "https://www.kernel.org/",
+      "image": "tux.png"
     }
 
   ]
