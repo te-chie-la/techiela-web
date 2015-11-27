@@ -7,12 +7,13 @@
       </p>
     </div>
 
+    <a href="{{.Site.Params.homeurl}}">Home</a> / <a href="{{.Site.BaseURL}}">Blog</a>
     <ul class="sidebar-nav">
-      <li><a href="{{.Site.Params.homeurl}}">Home</a> </li>
-      <li><a href="{{.Site.BaseURL}}">Blog</a> </li>
-      {{ range .Site.Menus.main }}
-        <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-      {{end}}
+      <hr />
+        {{ $currentNode := . }}
+        {{ range .Site.Menus.main }}
+            <li><a class="sidebar-nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a></li>
+        {{ end }}
     </ul>
 
     <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}}. All rights reserved. {{end}}</p>
