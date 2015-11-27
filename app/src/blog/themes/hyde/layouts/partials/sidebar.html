@@ -10,12 +10,14 @@
     <a href="{{.Site.Params.homeurl}}">Home</a> / <a href="{{.Site.BaseURL}}">Blog</a>
     <ul class="sidebar-nav">
       <hr />
-        {{ range .Data.Pages.ByDate }}
+        {{ range .Data.Pages.ByDate.Reverse }}
             <li>
                 <a href="{{ .Permalink }}">
                     {{ .Title }}
                 </a>
             </li>
+        {{ else }}
+            <a href="{{ .Site.BaseURL }}">Back</a>
         {{ end }}
     </ul>
 
