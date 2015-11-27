@@ -1,9 +1,10 @@
 baseurl = "http://te.chie.la/blog/"
 languageCode = "en-en"
 title = "Techiela's blog"
-relativeURLs = true
+relativeURLs = false
 
 theme = "hyde"
 [params]
-    themeColor = "theme-base-0b"
+    themeColor = "theme-techiela"
     description = "We are a company of techie people that aims to help you achieve your needs"
+    homeurl = "http://te.chie.la/"

@@ -7,11 +7,18 @@
       </p>
     </div>
 
+    <a href="{{.Site.Params.homeurl}}">Home</a> / <a href="{{.Site.BaseURL}}">Blog</a>
     <ul class="sidebar-nav">
-      <li><a href="/">Home</a> </li>
-      {{ range .Site.Menus.main }}
-        <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-      {{end}}
+      <hr />
+        {{ range .Data.Pages.ByDate.Reverse }}
+            <li>
+                <a href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+            </li>
+        {{ else }}
+            <a href="{{ .Site.BaseURL }}">Back</a>
+        {{ end }}
     </ul>
 
     <p>{{ with .Site.Params.copyright }}{{.}}{{ else }}&copy; {{.Now.Format "2006"}}. All rights reserved. {{end}}</p>
