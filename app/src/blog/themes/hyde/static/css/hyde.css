@@ -86,7 +86,10 @@ html {
 /* Sidebar nav */
 .sidebar-nav {
   padding-left: 0;
-  list-style: none;
+  font-size: 12px;
+}
+.sidebar-nav hr {
+  margin: 10px 0 10px;
 }
 .sidebar-nav-item {
   display: block;
@@ -97,6 +100,7 @@ a.sidebar-nav-item:focus {
 }
 .sidebar-nav-item.active {
   font-weight: bold;
+  font-size: 14px;
 }
 
 /* Sticky sidebar
