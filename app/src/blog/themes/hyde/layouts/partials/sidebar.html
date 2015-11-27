@@ -10,9 +10,12 @@
     <a href="{{.Site.Params.homeurl}}">Home</a> / <a href="{{.Site.BaseURL}}">Blog</a>
     <ul class="sidebar-nav">
       <hr />
-        {{ $currentNode := . }}
-        {{ range .Site.Menus.main }}
-            <li><a class="sidebar-nav-item{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a></li>
+        {{ range .Data.Pages.ByDate }}
+            <li>
+                <a href="{{ .Permalink }}">
+                    {{ .Title }}
+                </a>
+            </li>
         {{ end }}
     </ul>
 

@@ -1,5 +1,4 @@
 +++
-menu = "main"
 title = "Elasticsearch, Logstash and Kibana on Docker"
 date = "2015-02-11T18:30:00Z"
 Description = "Set up Elasticsearch - Logstash - Kibana stack in a Docker container"
