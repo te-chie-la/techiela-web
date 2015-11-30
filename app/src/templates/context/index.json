@@ -2,11 +2,15 @@
   "team": [
       {
         "name": "Raul Cumplido",
+        "github": "raulcd",
+        "linkedin": "raulcumplido",
         "image": "raul.jpg",
         "title": "CEO"
       },
       {
         "name": "Fran Hermoso",
+        "github": "franhp",
+        "linkedin": "franhp",
         "image": "fran.jpg",
         "title": "Developer"
       }
