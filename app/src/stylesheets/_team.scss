@@ -12,24 +12,23 @@
         img {
             border-radius: 50%;
             width: 90%;
-
-            &:hover {
-                border: 10px solid white;
-                transition: all 0.5s;
-            }
         }
 
         h2 {
-            font-weight: 600;
-            font-size: 14px;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 12px;
+            font-style: italic;
         }
 
         a {
             color: white;
-        }
 
-        .hackergotchi-title {
-            font-weight: 300;
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }
