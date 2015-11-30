@@ -8,7 +8,7 @@
     {% for technology in technologies %}
     <div class="col-xs-12 col-sm-6 col-md-3 technology">
         <a href="{{ technology.url }}">
-          <img src="images/technologies/{{ technology.image }}">
+          <img src="images/technologies/{{ technology.image }}" alt="{{ technology.name }}">
         </a>
     </div>
     {% endfor %}
