@@ -5,5 +5,6 @@ relativeURLs = false
 
 theme = "hyde"
 [params]
-    themeColor = "theme-base-0b"
+    themeColor = "theme-techiela"
     description = "We are a company of techie people that aims to help you achieve your needs"
+    homeurl = "http://te.chie.la/"

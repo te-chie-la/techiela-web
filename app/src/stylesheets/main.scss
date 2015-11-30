@@ -11,9 +11,11 @@
 
 body {
     position: relative;
-    text-transform: uppercase;
-
     font-family: $font-family;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 .container {
@@ -37,6 +39,7 @@ body {
         a {
             color: white;
             transition: all 0.5s;
+            text-transform: uppercase;
 
             &:hover {
                 color: #421C42;

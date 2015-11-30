@@ -16,11 +16,38 @@
       }
   ],
   "technologies": [
-    "Python",
-    "Django",
-    "Flask",
-    "PostgreSQL",
-    "AsyncIO",
-    "AngularJS"
+    {
+      "url": "https://www.python.org/",
+      "image": "python.png"
+    },
+    {
+      "url": "https://www.djangoproject.com/",
+      "image": "django.png"
+    },
+    {
+      "url": "http://flask.pocoo.org/",
+      "image": "flask.png"
+    },
+    {
+      "url": "http://www.postgresql.org/",
+      "image": "postgres.png"
+    },
+    {
+      "url": "https://golang.org/",
+      "image": "go.png"
+    },
+    {
+      "url": "https://angularjs.org/",
+      "image": "angular.png"
+    },
+    {
+      "url": "https://www.docker.com/",
+      "image": "docker.png"
+    },
+    {
+      "url": "https://www.kernel.org/",
+      "image": "tux.png"
+    }
+
   ]
 }

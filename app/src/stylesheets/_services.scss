@@ -1,5 +1,5 @@
 #services {
-    background-color: #170030;
+    background-color: #eb9f47;
     color: white;
 
     p {
@@ -9,7 +9,12 @@
     }
 
     .technology {
-        font-weight: 900;
-        font-size: 18px;
+        height: 80px;
+
+        img {
+            max-width: 150px;
+            max-height: 80px;
+        }
     }
+
 }
