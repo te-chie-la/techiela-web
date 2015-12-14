@@ -19,6 +19,12 @@ pip install -r requirements.txt
 bower install
 ```
 
+* Install dependencies for hugo
+
+```
+go get github.com/spf13/hugo
+```
+
 * And run it!
 
 ```
@@ -39,17 +45,6 @@ Development
 * Generate the site using `grunt dev`
 * ...
 * Profit!
-
-
-Blog
-====
-
-* Install `hugo`: `brew install hugo`
-* Go to the blog directory: `cd app/src/blog`
-* Start the server: `hugo server --buildDrafts --watch`
-* See the results: `http://127.0.0.1:1313/blog/`
-* ...
-* Profit again?
 
 
 Production

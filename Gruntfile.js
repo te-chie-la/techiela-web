@@ -56,6 +56,10 @@ module.exports = function(grunt) {
             concat: {
                 files: ['app/src/js/*'],
                 tasks: ['concat:dist']
+            },
+            hugo: {
+                files: ['app/src/blog/*'],
+                tasks: ['hugo']
             }
 
         },
@@ -111,12 +115,6 @@ module.exports = function(grunt) {
                         cwd: 'bower_components/fontawesome/fonts/',
                         src: '**/*',
                         dest: 'app/public/fonts/'
-                    },
-                    {
-                        expand: true,
-                        cwd: 'app/src/blog/public/',
-                        src: '**/*',
-                        dest: 'app/public/blog/'
                     }
                 ]
 
@@ -157,13 +155,42 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-jinja2');
 
-
+    //Hugo task
+    grunt.registerTask('hugo', 'hugo task', function(target){
+        var done = this.async();
+        var args = ['--source=app/src/blog/', '--destination=../../../app/public/blog/']
+        var hugo = require('child_process').spawn('hugo', args, {"stdio": "inherit"});
+        hugo.on('error', function(){ done() });
+        hugo.on('exit', function(){ done() });
+    });
 
     // Default task(s).
-    grunt.registerTask('default', ['connect:livereload', 'compass:dev', 'jinja2', 'copy', 'concat', 'watch']);
+    grunt.registerTask('default', [
+        'connect:livereload',
+        'compass:dev',
+        'jinja2',
+        'hugo',
+        'copy',
+        'concat',
+        'watch'
+    ]);
     // prod build
-    grunt.registerTask('prod', ['compass:prod', 'jinja2', 'copy', 'uglify:dist']);
+    grunt.registerTask('prod', [
+        'compass:prod',
+        'jinja2',
+        'hugo',
+        'copy',
+        'concat',
+        'uglify:dist'
+    ]);
     // dev build
-    grunt.registerTask('dev', ['compass:dev', 'jinja2', 'copy', 'uglify:dist']);
+    grunt.registerTask('dev', [
+        'compass:dev',
+        'jinja2',
+        'hugo',
+        'copy',
+        'concat',
+        'uglify:dist'
+    ]);
 
 };
