@@ -4,7 +4,7 @@
     <i class="title-circle fa fa-lightbulb-o fa-3x"></i>
 
     <p>
-        We are a team of python experts with a wealth of experience on scrum,
+        We are a <strong>team of python experts</strong> with a wealth of experience on scrum,
         kanban and extreme programming methodologies
     </p>
 
@@ -14,9 +14,17 @@
 
             <h2>{{ person.name}}</h2>
 
-            <div class="hackergotchi-title">
-                {{ person.title }} & Techie
-            </div>
+
+            <p>{{ person.title }} & Techie</p>
+
+            <a href="https://github.com/{{ person.github }}">
+                <span class="fa fa-github-square fa-2x"></span>
+            </a>
+            &nbsp;&nbsp;
+            <a href="https://uk.linkedin.com/in/{{ person.linkedin }}">
+                <span class="fa fa-linkedin-square fa-2x"></span>
+            </a>
+
         </div>
     {% endfor %}
 </div>

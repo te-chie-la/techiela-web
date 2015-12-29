@@ -2,45 +2,57 @@
   "team": [
       {
         "name": "Raul Cumplido",
+        "github": "raulcd",
+        "linkedin": "raulcumplido",
         "image": "raul.jpg",
         "title": "CEO"
       },
       {
         "name": "Fran Hermoso",
+        "github": "franhp",
+        "linkedin": "franhp",
         "image": "fran.jpg",
         "title": "Developer"
       }
   ],
   "technologies": [
     {
+      "name": "python",
       "url": "https://www.python.org/",
       "image": "python.png"
     },
     {
+      "name": "django",
       "url": "https://www.djangoproject.com/",
       "image": "django.png"
     },
     {
+      "name": "flask",
       "url": "http://flask.pocoo.org/",
       "image": "flask.png"
     },
     {
+      "name": "postgres",
       "url": "http://www.postgresql.org/",
       "image": "postgres.png"
     },
     {
+      "name": "go",
       "url": "https://golang.org/",
       "image": "go.png"
     },
     {
+      "name": "angularjs",
       "url": "https://angularjs.org/",
       "image": "angular.png"
     },
     {
+      "name": "docker",
       "url": "https://www.docker.com/",
       "image": "docker.png"
     },
     {
+      "name": "linux",
       "url": "https://www.kernel.org/",
       "image": "tux.png"
     }
