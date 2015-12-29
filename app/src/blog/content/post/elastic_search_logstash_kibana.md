@@ -4,6 +4,7 @@ date = "2015-02-11T18:30:00Z"
 Description = "Set up Elasticsearch - Logstash - Kibana stack in a Docker container"
 Tags = ["elasticsearch", "logstash", "kibana"]
 Categories = ["python", "docker"]
+author = "Raul Cumplido"
 
 +++
 
@@ -18,7 +19,7 @@ as I've heard of the stack.
 The first thing to notice when using it is how easy to use is. It took me a couple of hours
 since I decided to use it to have a prototype working on my local host. So let's see each one of them.
 
-![kibana stack image](img/log-logstash-elasticsearch-kibana-flow-small.jpg)
+![kibana stack image](/blog/img/log-logstash-elasticsearch-kibana-flow-small.jpg)
 
 ### Elasticsearch
 
@@ -177,7 +178,7 @@ and send periodically our access logs to be able to have the logs updated every 
 And I thought that maybe creating a Docker container to be able to replicate it easily on the future may
 be a good possibility.
 
-![Docker image](img/docker_logo.png)
+![Docker image](/blog/img/docker_logo.png)
 
 ### First Approach - One to rule them all
 

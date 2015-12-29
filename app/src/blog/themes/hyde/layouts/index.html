@@ -14,7 +14,7 @@
       </a>
     </h1>
 
-    <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+    <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }} / <small>by {{ .Params.author }}</small></span>
 
     {{ .Content }}
   </div>
