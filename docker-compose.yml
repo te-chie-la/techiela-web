@@ -1,0 +1,14 @@
+builder:
+  build: .
+  volumes:
+    - .:/src
+
+server:
+  image: nginx
+  volumes:
+    - ./app/public:/usr/share/nginx/html
+    - ./nginx/:/etc/nginx/
+    - /etc/letsencrypt/live/te.chie.la:/etc/nginx/ssl/
+  ports:
+    - "80:80"
+    - "443:443"
