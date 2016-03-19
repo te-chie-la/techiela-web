@@ -20,11 +20,8 @@ RUN go get github.com/spf13/hugo
 
 # Install build dependencies
 WORKDIR /src/
-ADD package.json /src/
-ADD bower.json /src/
 ENV PATH /src/node_modules/.bin/:$PATH
 
-RUN npm install && \
-    bower install --allow-root --config.interactive=false
-
-CMD grunt prod
+CMD npm install && \
+    bower install --allow-root --config.interactive=false && \
+     grunt prod
