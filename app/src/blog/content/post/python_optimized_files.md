@@ -4,6 +4,7 @@ date = "2015-03-17T11:30:00Z"
 Description = "How is Python using the bytecode files and why?"
 Tags = ["bytecode"]
 Categories = ["python"]
+author = "Raul Cumplido"
 
 +++
 

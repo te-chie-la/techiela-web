@@ -4,6 +4,7 @@ date = "2014-07-07T18:30:00Z"
 Description = "How to create your Pelican Blog and deploy on github pages"
 Tags = ["pelican"]
 Categories = ["python"]
+author = "Raul Cumplido"
 
 +++
 

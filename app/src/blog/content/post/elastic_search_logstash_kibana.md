@@ -4,6 +4,7 @@ date = "2015-02-11T18:30:00Z"
 Description = "Set up Elasticsearch - Logstash - Kibana stack in a Docker container"
 Tags = ["elasticsearch", "logstash", "kibana"]
 Categories = ["python", "docker"]
+author = "Raul Cumplido"
 
 +++
 
