@@ -12,3 +12,13 @@ server:
   ports:
     - "80:80"
     - "443:443"
+
+letsencrypt:
+  image: quay.io/letsencrypt/letsencrypt:latest
+  command: auth --renew-by-default --domains="te.chie.la"
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - /etc/letsencrypt:/etc/letsencrypt
+    - /var/lib/letsencrypt:/var/lib/letsencrypt
