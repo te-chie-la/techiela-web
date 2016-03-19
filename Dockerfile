@@ -7,7 +7,6 @@ RUN apt-get -y install \
     git \
     mercurial \
     build-essential \
-    python-pip \
     ruby-dev \
     ruby-compass \
     npm \
@@ -23,7 +22,7 @@ RUN go get github.com/spf13/hugo
 WORKDIR /src/
 ENV PATH /src/node_modules/.bin/:$PATH
 
-CMD npm install && \
-    bower install --allow-root --config.interactive=false && \
-    pip install -r requirements.txt && \
-    grunt prod
+RUN npm install && \
+    bower install --allow-root --config.interactive=false
+
+CMD grunt prod

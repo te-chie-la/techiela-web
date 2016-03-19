@@ -1,12 +1,12 @@
 {
   "name": "techiela-web",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "Techiela"
   ],
   "license": "MIT",
   "private": true,
-  "homepage": "http://te.chie.la/",
+  "homepage": "https://te.chie.la/",
   "dependencies": {
     "bootstrap-sass": "latest",
     "fontawesome": "latest"
