@@ -7,7 +7,3 @@ node_modules/
 
 # OSX specific
 **/.DS_Store
-
-
-# PyCharm specific
-.idea/
