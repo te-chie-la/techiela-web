@@ -1,4 +1,4 @@
-baseurl = "http://te.chie.la/blog/"
+baseurl = "https://te.chie.la/blog/"
 languageCode = "en-en"
 title = "Techiela's blog"
 relativeURLs = false
@@ -7,4 +7,4 @@ theme = "hyde"
 [params]
     themeColor = "theme-techiela"
     description = "We are a company of techie people that aims to help you achieve your needs"
-    homeurl = "http://te.chie.la/"
+    homeurl = "https://te.chie.la/"

@@ -98,7 +98,7 @@ If the PEP has been implemented we can see something like this:
 
 The next diagram has been extracted directly from the PEP-3147 which explains clearly what is the workflow to load/compile the bytecode when importing:
 
-![PEP 3147 Workflow](img/pep-3147-1.png)
+![PEP 3147 Workflow](/blog/img/pep-3147-1.png)
 
 As previously explained the `pyc` file matches when both the magic number and the timestamp of the source file matches exactly in the compiled file.
 
