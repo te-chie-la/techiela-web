@@ -1,4 +1,4 @@
-FROM ubuntu:15.10
+FROM ubuntu:16.04
 MAINTAINER franhp@te.chie.la
 
 RUN apt-get -y update
@@ -20,6 +20,8 @@ RUN go get github.com/spf13/hugo
 
 # Install build dependencies
 WORKDIR /src/
+ADD package.json /src/
+ADD bower.json /src/
 ENV PATH /src/node_modules/.bin/:$PATH
 
 RUN npm install && \
