@@ -15,7 +15,7 @@ server:
 
 letsencrypt:
   image: quay.io/letsencrypt/letsencrypt:latest
-  command: certonly --renew-by-default --domains="te.chie.la"
+  command: certonly --renew-by-default --domains="te.chie.la,chie.la"
   ports:
     - "80:80"
     - "443:443"
