@@ -7,12 +7,6 @@ Installation
 npm install
 ```
 
-* Install python dependencies for jinja2
-
-```
-pip install -r requirements.txt
-```
-
 * Install bower dependencies
 
 ```

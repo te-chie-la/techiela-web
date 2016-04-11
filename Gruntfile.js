@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function(grunt) {
 
     // Project configuration.
@@ -12,8 +13,7 @@ module.exports = function(grunt) {
             options: {
                 port: 9000,
                 livereload: 35729,
-                // Change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -23,11 +23,11 @@ module.exports = function(grunt) {
                         '<%= config.app %>/public'
                     ]
                 }
-            },
+            }
         },
         watch: {
             options: {
-                livereload: true,
+                livereload: true
             },
             livereload: {
                 options: {
@@ -45,9 +45,9 @@ module.exports = function(grunt) {
                 files: ['**/*.{scss,sass}'],
                 tasks: ['compass:dev']
             },
-            jinja2: {
+            nunjucks: {
                 files: ['app/src/templates/**'],
-                tasks: ['jinja2:main']
+                tasks: ['nunjucks']
             },
             copy: {
                 files: ['app/src/images/*', 'app/src/fonts/*'],
@@ -62,6 +62,23 @@ module.exports = function(grunt) {
                 tasks: ['hugo']
             }
 
+        },
+        nunjucks: {
+            options: {
+                paths: ['app/src/templates'],
+                data: grunt.file.readJSON('app/src/templates/context.json')
+            },
+            render: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'app/src/templates/',
+                        src: '*.html',
+                        dest: 'app/public/',
+                        ext: '.html'
+                    }
+                ]
+            }
         },
         compass: {
             dev: {
@@ -78,21 +95,6 @@ module.exports = function(grunt) {
                     environment: 'production',
                     outputStyle: 'compressed'
                 }
-            },
-        },
-        jinja2: {
-            main: {
-                options:{
-                    template_path: 'app/src/templates',
-                    context_path: 'app/src/templates/context'
-                },
-                files: [{
-                    expand: true,
-                    cwd: 'app/src/templates',
-                    src: ['*.html'],
-                    dest: 'app/public',
-                    ext: '.html'
-                }]
             }
         },
         copy: {
@@ -123,14 +125,14 @@ module.exports = function(grunt) {
         concat: {
             dev: {
                 options: {
-                  separator: ';\n',
+                  separator: ';\n'
                 },
                 src: [
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                     'app/src/js/**/*'
                 ],
-                dest: 'app/public/js/scripts.js',
+                dest: 'app/public/js/scripts.js'
             }
         },
         uglify: {
@@ -153,22 +155,22 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-jinja2');
+    grunt.loadNpmTasks('grunt-nunjucks-2-html');
 
     //Hugo task
     grunt.registerTask('hugo', 'hugo task', function(target){
         var done = this.async();
-        var args = ['--source=app/src/blog/', '--destination=../../../app/public/blog/']
-        var hugo = require('child_process').spawn('hugo', args, {"stdio": "inherit"});
-        hugo.on('error', function(){ done() });
-        hugo.on('exit', function(){ done() });
+        var args = ['--source=app/src/blog/', '--destination=../../../app/public/blog/'];
+        var hugo = require('child_process').spawn('hugo', args, {'stdio': 'inherit'});
+        hugo.on('error', function(){ done(); });
+        hugo.on('exit', function(){ done(); });
     });
 
     // Default task(s).
     grunt.registerTask('default', [
         'connect:livereload',
         'compass:dev',
-        'jinja2',
+        'nunjucks',
         'hugo',
         'copy',
         'concat',
@@ -177,7 +179,7 @@ module.exports = function(grunt) {
     // prod build
     grunt.registerTask('prod', [
         'compass:prod',
-        'jinja2',
+        'nunjucks',
         'hugo',
         'copy',
         'concat',
@@ -186,7 +188,7 @@ module.exports = function(grunt) {
     // dev build
     grunt.registerTask('dev', [
         'compass:dev',
-        'jinja2',
+        'nunjucks',
         'hugo',
         'copy',
         'concat',
