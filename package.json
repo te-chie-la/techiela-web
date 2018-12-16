@@ -18,8 +18,8 @@
         "nunjucks": "^2.4.1"
     },
     "repository": {
-      "type": "git",
-      "url": "git://github.com/te-chie-la/techiela-web.git"
+        "type": "git",
+        "url": "git://github.com/te-chie-la/techiela-web.git"
     },
     "license": "CC-BY-SA-4.0"
 }

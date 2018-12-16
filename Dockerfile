@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.10
 MAINTAINER franhp@te.chie.la
 
 RUN apt-get -y update
@@ -8,15 +8,17 @@ RUN apt-get -y install \
     mercurial \
     build-essential \
     ruby-dev \
-    ruby-compass \
+    compass-blueprint-plugin \
     npm \
-    nodejs-legacy \
+    nodejs \
     golang
+
+RUN gem install compass
 
 # Install hugo
 ENV GOPATH $HOME/go
 ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
-RUN go get github.com/spf13/hugo
+RUN go get github.com/gohugoio/hugo
 
 # Install build dependencies
 WORKDIR /src/
