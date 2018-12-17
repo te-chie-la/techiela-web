@@ -129,6 +129,7 @@ module.exports = function(grunt) {
                 },
                 src: [
                     'bower_components/jquery/dist/jquery.js',
+                    'bower_components/waypoints/lib/jquery.waypoints.js',
                     'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                     'app/src/js/**/*'
                 ],
@@ -140,6 +141,7 @@ module.exports = function(grunt) {
                 files: {
                     'app/public/js/scripts.js': [
                         'bower_components/jquery/dist/jquery.js',
+                        'bower_components/waypoints/lib/jquery.waypoints.js',
                         'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                         'app/src/js/**/*'
                     ]

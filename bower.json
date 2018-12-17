@@ -9,7 +9,8 @@
   "homepage": "https://te.chie.la/",
   "dependencies": {
     "bootstrap-sass": "latest",
-    "fontawesome": "latest"
+    "fontawesome": "latest",
+    "waypoints": "latest"
   },
   "ignore": [
     "**/.*",
