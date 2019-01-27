@@ -51,3 +51,19 @@ grunt prod
 ```
 
 Collect your site code in `app/public/`
+
+
+Publish
+=======
+
+In order to publish an image use the command:
+
+```
+make publish
+```
+
+You will need to authenticate to gcloud first:
+
+```
+gcloud auth login
+```
