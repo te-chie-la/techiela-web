@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: techielaweb
+spec:
+  selector:
+    matchLabels:
+      app: web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - name: web
+        image: gcr.io/te-chie-la/web:latest
+        volumeMounts:
+            - mountPath: /etc/nginx/conf.d
+              name: nginx-config
+        resources:
+          limits:
+            memory: 128Mi
+            cpu: 0.3
+          requests:
+            memory: 64Mi
+            cpu: 0.1
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          httpGet:
+            port: 80
+            path: /health
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            port: 80
+            path: /health
+          initialDelaySeconds: 5
+          periodSeconds: 5
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: nginx-files-config
+            items:
+              - key: techiela.conf
+                path: techiela.conf

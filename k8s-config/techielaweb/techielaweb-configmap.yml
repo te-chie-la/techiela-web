@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-files-config
+  namespace: techielaweb
+data:
+
+  techiela.conf: |
+    server {
+        listen 80;
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+
+        location /static {
+            alias /usr/src/app/static;
+        }
+
+        location /health {
+            access_log off;
+            return 200 'health check alive';
+        }
+    }
