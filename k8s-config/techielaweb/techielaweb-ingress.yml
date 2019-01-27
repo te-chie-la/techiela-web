@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  namespace: techielaweb
+  name: techielaweb-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    external-dns.alpha.kubernetes.io/hostname: te.dev.chie.la
+    kubernetes.io/tls-acme: "true"
+spec:
+  tls:
+  - hosts:
+    - te.dev.chie.la
+    secretName: techiela-tls
+  rules:
+  - host: te.dev.chie.la
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: web
+          servicePort: 80
