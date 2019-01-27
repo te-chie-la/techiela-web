@@ -1,24 +1,16 @@
-builder:
-  build: .
-  volumes:
-    - .:/src
+version: '2'
+services:
 
-server:
-  image: nginx:latest
-  volumes:
-    - ./app/public:/usr/share/nginx/html
-    - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-    - /etc/letsencrypt:/etc/letsencrypt/
-  ports:
-    - "80:80"
-    - "443:443"
+  builder:
+    build:
+        context: .
+        dockerfile: Dockerfile.build
+    volumes:
+      - .:/src
 
-letsencrypt:
-  image: quay.io/letsencrypt/letsencrypt:latest
-  command: certonly --renew-by-default --domains="te.chie.la,chie.la"
-  ports:
-    - "80:80"
-    - "443:443"
-  volumes:
-    - /etc/letsencrypt:/etc/letsencrypt
-    - /var/lib/letsencrypt:/var/lib/letsencrypt
+  web:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    ports:
+      - "80:80"
